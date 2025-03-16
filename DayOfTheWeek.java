@@ -6,10 +6,19 @@ import java.util.Scanner;
  * @since   2025-02-25
  */
 
-final class DayOfTheWeek {
-    /**
-     * Input.
-     */
+public final class DayOfTheWeek {
+    /**Monday. */
+    private static final int NUMBER_ONE = 1;
+    /** Tuesday. */
+    private static final int NUMBER_TWO = 2;
+    /**  Wednesday. */
+    private static final int NUMBER_THREE = 3;
+    /**Thursday. */
+    private static final int NUMBER_FOUR = 4;
+    /**Friday. */
+    private static final int NUMBER_FIVE = 5;
+    /**Saturday. */
+    private static final int NUMBER_SIX = 6;
     private DayOfTheWeek() {
         throw new IllegalStateException("Utility class");
     }
@@ -34,17 +43,17 @@ final class DayOfTheWeek {
             }
         }
         String weekday;
-        if (number == 1) {
+        if (number == NUMBER_ONE) {
             weekday = "Monday";
-        } else if (number == 2) {
+        } else if (number == NUMBER_TWO) {
             weekday = "Tuesday";
-        } else if (number == 3) {
+        } else if (number == NUMBER_THREE) {
             weekday = "Wednesday";
-        } else if (number == 4) {
+        } else if (number == NUMBER_FOUR) {
             weekday = "Thursday";
-        } else if (number == 5) {
+        } else if (number == NUMBER_FIVE) {
             weekday = "Friday";
-        } else if (number == 6) {
+        } else if (number == NUMBER_SIX) {
             weekday = "Saturday";
         } else {
             weekday = "Sunday";
