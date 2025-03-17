@@ -57,7 +57,7 @@ public final class DayOfTheWeek {
             weekday = "Friday";
         } else if (number == NUMBER_SIX) {
             weekday = "Saturday";
-        } else {
+        } else (number == NUMBER_SEVEN) {
             weekday = "Sunday";
         }
         System.out.println("The day is: " + weekday);
