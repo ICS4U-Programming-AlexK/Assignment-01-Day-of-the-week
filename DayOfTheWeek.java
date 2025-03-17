@@ -19,6 +19,8 @@ public final class DayOfTheWeek {
     private static final int NUMBER_FIVE = 5;
     /**Saturday. */
     private static final int NUMBER_SIX = 6;
+    /**Sunday. */
+    private static final int NUMBER_SEVEN = 7;
     private DayOfTheWeek() {
         throw new IllegalStateException("Utility class");
     }
