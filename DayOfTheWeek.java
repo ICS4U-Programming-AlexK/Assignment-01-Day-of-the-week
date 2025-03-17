@@ -35,7 +35,7 @@ public final class DayOfTheWeek {
             try {
                 System.out.print("Enter a number between 1 and 7: ");
                 number = Integer.parseInt(scanner.nextLine());
-                if (number < 1 || number > 7) {
+                if (number < NUMBER_ONE || number > NUMBER_SEVEN) {
                     System.out.println("Error, Only numbers between 1 and 7: ");
                 } else {
                     validInput = true;
@@ -57,7 +57,7 @@ public final class DayOfTheWeek {
             weekday = "Friday";
         } else if (number == NUMBER_SIX) {
             weekday = "Saturday";
-        } else (number == NUMBER_SEVEN) {
+        } else {
             weekday = "Sunday";
         }
         System.out.println("The day is: " + weekday);
