@@ -6,7 +6,7 @@ import java.util.Scanner;
  * @since   2025-02-25
  */
 
-public final class DayOfTheWeek {
+final class DayOfTheWeek {
     /**Monday. */
     private static final int NUMBER_ONE = 1;
     /** Tuesday. */
@@ -33,17 +33,21 @@ public final class DayOfTheWeek {
         boolean validInput = false;
         while (!validInput) {
             try {
+                // Prompt the user to enter a number between 1 and 7.
                 System.out.print("Enter a number between 1 and 7: ");
                 number = Integer.parseInt(scanner.nextLine());
+                // Check if the number is between 1 and 7.
                 if (number < NUMBER_ONE || number > NUMBER_SEVEN) {
                     System.out.println("Error, Only numbers between 1 and 7: ");
                 } else {
                     validInput = true;
                 }
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid,Enter a number between 1 and 7: ");
+            } catch (NumberFormatException error) {
+                System.out.println("Invalid,Enter a number between 1 and 7: "
+                 + error.getMessage());
             }
         }
+        // Display the day of the week.
         String weekday;
         if (number == NUMBER_ONE) {
             weekday = "Monday";
