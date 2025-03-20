@@ -41,12 +41,12 @@ final class DayOfTheWeek {
                     validInput = true;
                 }
             } catch (NumberFormatException error) {
-                System.out.println("Error. Only numbers between 1 and 7: "
+                System.out.println("Error : "
                  + error.getMessage());
             }
         }
         // Display the day of the week using switch-case.
-        String weekday;
+        String weekday = "";
         switch (number) {
             case NUMBER_ONE:
                 weekday = "Monday";
@@ -70,9 +70,9 @@ final class DayOfTheWeek {
                 weekday = "Sunday";
                 break;
             default:
-                throw new IllegalStateException("Unexpected value: " + number);
+                weekday = "Invalid number";
+                break;
         }
-        // Display the day of the week.
-        System.out.println("The day is: " + weekday);
+        System.out.println("The day of the week is " + weekday);
     }
 }
