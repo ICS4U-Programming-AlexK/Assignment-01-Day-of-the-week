@@ -1,11 +1,9 @@
 import java.util.Scanner;
-
 /**
  * @author  Alex Kapajika
  * @version 1.0
  * @since   2025-02-25
  */
-
 final class DayOfTheWeek {
     /**Monday. */
     private static final int NUMBER_ONE = 1;
@@ -38,32 +36,43 @@ final class DayOfTheWeek {
                 number = Integer.parseInt(scanner.nextLine());
                 // Check if the number is between 1 and 7.
                 if (number < NUMBER_ONE || number > NUMBER_SEVEN) {
-                    System.out.println("Error, Only numbers between 1 and 7: ");
+                    System.out.println("Error, Only numbers between 1 and 7.");
                 } else {
                     validInput = true;
                 }
             } catch (NumberFormatException error) {
-                System.out.println("Invalid,Enter a number between 1 and 7: "
+                System.out.println("Error. Only numbers between 1 and 7: "
                  + error.getMessage());
             }
         }
-        // Display the day of the week.
+        // Display the day of the week using switch-case.
         String weekday;
-        if (number == NUMBER_ONE) {
-            weekday = "Monday";
-        } else if (number == NUMBER_TWO) {
-            weekday = "Tuesday";
-        } else if (number == NUMBER_THREE) {
-            weekday = "Wednesday";
-        } else if (number == NUMBER_FOUR) {
-            weekday = "Thursday";
-        } else if (number == NUMBER_FIVE) {
-            weekday = "Friday";
-        } else if (number == NUMBER_SIX) {
-            weekday = "Saturday";
-        } else {
-            weekday = "Sunday";
+        switch (number) {
+            case NUMBER_ONE:
+                weekday = "Monday";
+                break;
+            case NUMBER_TWO:
+                weekday = "Tuesday";
+                break;
+            case NUMBER_THREE:
+                weekday = "Wednesday";
+                break;
+            case NUMBER_FOUR:
+                weekday = "Thursday";
+                break;
+            case NUMBER_FIVE:
+                weekday = "Friday";
+                break;
+            case NUMBER_SIX:
+                weekday = "Saturday";
+                break;
+            case NUMBER_SEVEN:
+                weekday = "Sunday";
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + number);
         }
+        // Display the day of the week.
         System.out.println("The day is: " + weekday);
     }
 }
